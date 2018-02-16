@@ -1,0 +1,71 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Perfil <ion-icon name="exit" (click)="logout()"></ion-icon> </ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <img src="{{user.fotoPerfil}}"/>
+
+    <p> {{user.nombre}} &nbsp; {{user.apellido}} <p>
+    <p> {{user.correo}} <p>
+    <p> {{user.dni}} <p>
+    <p> {{user.domicilio}} <p>
+    <p> {{user.telefono}} <p>
+    <p> {{user.nacimiento}} <p>
+
+  <ion-item>
+    <ion-label floating>Nombre</ion-label>
+    <ion-input [(ngModel)]="user.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Apellido</ion-label>
+      <ion-input [(ngModel)]="user.apellido"></ion-input>
+    </ion-item>
+
+  <ion-item>
+      <ion-label floating>Correo eléctronico</ion-label>
+      <ion-input [(ngModel)]="user.correo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Cambiar contraseña</ion-label>
+      <ion-input [(ngModel)]="user.contrasena"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>DNI</ion-label>
+      <ion-input [(ngModel)]="user.dni"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Domicilio</ion-label>
+      <ion-input [(ngModel)]="user.domicilio"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label floating>Teléfono</ion-label>
+        <ion-input [(ngModel)]="user.telefono"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label floating>Nacimiento</ion-label>
+        <ion-input [(ngModel)]="user.nacimiento"></ion-input>
+    </ion-item>
+
+
+  <button ion-button clear block (click)="saveProfile()">Actualizar Perfil</button>
+
+</ion-content>
